@@ -14,7 +14,7 @@ subtitle: Make an inference on your browser
         * Interface is blocked during inference
     </div>
     <input style="margin-top:5%" type="file" id="load" onchange="runInference($(this))" accept="image/png, image/jpeg">
-    <div style="overflow-y: auto; margin.top:5%; height:100%">
+    <div style="overflow-y: auto; margin-top:5%; height:100%">
         <img id="inputImg" src="">
         <img id="outputImg" src="">
     </div>
@@ -41,16 +41,16 @@ subtitle: Make an inference on your browser
         */
         predict(img) {
             return tf.tidy(() => {
-
                 var raw_input = tf.browser.fromPixels(img)
                 var upsampledraw_input = tf.image.resizeBilinear(raw_input, [this.height, this.width])
                 var preprocessedInput = upsampledraw_input.expandDims()
                 preprocessedInput = tf.div(preprocessedInput, 255.0)
                 var result = this.model.predict(preprocessedInput);
                 result = this.prepareOutput(result, img.width, img.height);
+                upsampledraw_input = tf.cast(upsampledraw_input, 'int32')
                 const data = result.dataSync();
-                console.log('Tensors afters:', tf.memory().numTensors);
-                return data
+                const resizeInputData = upsampledraw_input.dataSync();
+                return [data, resizeInputData]
             });
         }
 
@@ -63,7 +63,6 @@ subtitle: Make an inference on your browser
         */
         prepareOutput(tensor, width, height) {
             return tf.tidy(() => {
-                tensor = tf.image.resizeBilinear(tensor, [height, width])
                 tensor = tf.squeeze(tensor)
                 var max_value = tf.max(tensor)
                 tensor = tf.div(tensor, max_value)
@@ -87,16 +86,26 @@ subtitle: Make an inference on your browser
     }
 
     async function run_inference(img) {
-        $("#inputImg").attr("src", img.src)
-        var prediction = await model.predict(img)
-        return prediction
+        var outputs = await model.predict(img)
+        return outputs
+    }
+
+    async function display_input(img, element, width, height) {
+        var canvas = document.createElement('canvas')
+        canvas.width = width
+        canvas.height = height
+        const ctx = canvas.getContext('2d');
+        var resizedImg = TensorToImage.apply(img, width, height)
+        const imageData = new ImageData(resizedImg, width, height);
+        ctx.putImageData(imageData, 0, 0);
+        dataUrl = canvas.toDataURL()
+        element.attr("src", dataUrl)
     }
 
     async function display_result(img) {
-        var result = await run_inference(img)
-        var canvas = document.createElement('canvas')
-        output_element = $("#outputImg");
-        displayTensor(result, output_element, img.width, img.height)
+        var results = await run_inference(img)
+        displayTensor(results[0], $("#outputImg"), model.width, model.height)
+        display_input(results[1], $("#inputImg"), model.width, model.height)
     }
 
     function displayTensor(data, output_element, width, height) {
@@ -105,10 +114,36 @@ subtitle: Make an inference on your browser
         canvas.height = height
         const ctx = canvas.getContext('2d');
         var buffer = MagmaColorMap.apply(data, width, height)
-        const imageData = new ImageData(buffer, width, height);
-        ctx.putImageData(imageData, 0, 0);
+        const imageData = new ImageData(buffer, width, height)
+        ctx.putImageData(imageData, 0, 0)
         dataUrl = canvas.toDataURL()
         output_element.attr("src", dataUrl)
+    }
+
+    /**
+    * From Tensor to Image
+    * @param {Tensor} tensor with resized input image
+    * @param {int} width of the image
+    * @param {int} height of the image
+    * @return {Uint8ClampedArray} resized tensor as Uint8ClampedArray image
+    */
+    class TensorToImage{
+        static apply(buffer, width, height){
+            var image = new Uint8ClampedArray(width * height * 4)
+            var i = 0
+            var index = 0
+            for (var y = 0; y < height; y++) {
+                for (var x = 0; x < width; x++) {
+                    image[i] = buffer[index]
+                    image[i + 1] = buffer[index+1]
+                    image[i + 2] = buffer[index+2]
+                    image[i + 3] = 255.0
+                    i += 4
+                    index+= 3
+                }
+            }
+            return image
+        }
     }
 
     class MagmaColorMap {
