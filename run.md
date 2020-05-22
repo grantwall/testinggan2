@@ -27,7 +27,7 @@ subtitle: Make an inference on your browser
         */
         async init(urls) {
 
-            const MODEL = "/assets/js/pydnet.json"
+            const MODEL = "{{site.baseurl}}/assets/js/pydnet.json"
             this.model = await tf.loadGraphModel(MODEL);
             this.height = 384
             this.width = 640
