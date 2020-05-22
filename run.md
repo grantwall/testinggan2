@@ -7,7 +7,11 @@ subtitle: Make an inference on your browser
 <div style="text-align: center;">
     <div style="margin-top:1%">
         <br>
+With TensorFlow JS the network runs on your device: the image is not sent and processed by the server!
+        <br>
         Please notice that:
+        <br>
+        * The network has been trained in landscape mode
         <br>
         * First inference may be slower than subsequent
         <br>
