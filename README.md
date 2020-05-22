@@ -1,4 +1,5 @@
-# Demo Website for "Learning and Understanding Single Image Depth Estimation in the Wild",
+# Mobile Monocular Live Demo
+Website for "Learning and Understanding Single Image Depth Estimation in the Wild",
 Tutorial CVPR 2020 
 
 # Contact
