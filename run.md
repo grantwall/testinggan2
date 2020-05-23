@@ -9,9 +9,7 @@ subtitle: Make an inference on your browser
         
             <div class="col-sm-3">
               <figure>
-                <a href="https://www.tensorflow.org/js">
-                    <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tensorflow.org%2Fjs&psig=AOvVaw2qGeF7dMX_Q4owRk5CjvCB&ust=1590331188955000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCID8_L6byukCFQAAAAAdAAAAABAO">
-                </a>
+                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tensorflow.org%2Fjs&psig=AOvVaw2qGeF7dMX_Q4owRk5CjvCB&ust=1590331188955000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCID8_L6byukCFQAAAAAdAAAAABAO">
                 <figcaption class="figure-caption">Thanks to TensorFlowJS, the network runs on your device</figcaption>
               </figure>
             </div>
