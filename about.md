@@ -29,7 +29,7 @@ browser. Indeed, using [TensorFlow JS](https://www.tensorflow.org/js) the networ
 First, the client does not need to share user images with the server, since they are processed locally in the client device, thus enhancing the privacy of the user.
 Moreover, the server can scale better, since it has less tasks to solve.
 For instance, suppose you have to serve 1k people: in a client-server application all the clients send a request to the server, which has to take the images, process them and send back to the client
-the outcomes. If the users now become 10k, or even more, you may have to replicate more servers. Instead, if each client is able to process the images on its own
+the outcomes. If the users now become 10k, or even more, you may have to replicate the server. Instead, if each client is able to process the images on its own
 then the server may serve more clients!
 You might argue that the server is necessary to provide the web page, and you have right. But
 in the native mobile application we run server-less! This is also great, because we have gained in terms of dependencies: we can run the app even where, for instance, a good internet connection is not
