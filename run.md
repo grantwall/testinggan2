@@ -17,28 +17,24 @@ subtitle: Make an inference on your browser
                 <figcaption class="figure-caption">Use landscape pictures</figcaption>
             </figure>
         </div>
-
         <div class="col-sm-3">
             <figure class="figure">
                <i class="fas fa-clock"></i>
                 <figcaption class="figure-caption">First inference is slower (model is not cached yet)</figcaption>
             </figure>
         </div>
-
         <div class="col-sm-3">
             <figure class="figure">
                 <i class="fas fa-spinner"></i>
                 <figcaption class="figure-caption">Interface is blocked during inference</figcaption>
             </figure>
         </div>
-
     </div>
-
-    <div class="row" style="margin-top:5%">
-        <input class="text-center" type="file" id="load" onchange="runInference($(this))" accept="image/png, image/jpeg">
+    <div class="row text-center" style="margin-top:20px">
+        <input type="file" id="load" onchange="runInference($(this))" accept="image/png, image/jpeg">
     </div>
-    <div class="row">
-        div class="col-md-6">
+    <div class="row" style="margin-top:20px">
+        <div class="col-md-6">
             <img id="inputImg" src="">
         </div>
         <div class="col-md-6">
