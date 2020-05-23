@@ -75,7 +75,7 @@ subtitle: Make an inference on your browser
                 const data = result.dataSync();
                 const resizeInputData = upsampledraw_input.dataSync();
                 return [data, resizeInputData]
-            }
+            });
             await tf.nextFrame();
             return [data, resizeInputData] 
         }
