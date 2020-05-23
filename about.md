@@ -43,3 +43,12 @@ available.
     <div class="col-md-6 col-sm-12">
     <img src="{{site.baseurl}}/assets/img/client.png" alt="client"> 
   </div>
+  <div class="row">
+      <div class="col-md-6 col-sm-12">
+        Client-Side approach
+      </div>
+      <div class="col-md-6 col-sm-12">
+        Independent Client
+      </div>
+  </div>
+</div>
