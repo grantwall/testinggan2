@@ -95,6 +95,7 @@ subtitle: Make an inference on your browser
         */
         prepareOutput(tensor, width, height) {
             return tf.tidy(() => {
+                tensor = tf.relu(tensor)
                 tensor = tf.squeeze(tensor)
                 var max_value = tf.max(tensor)
                 tensor = tf.div(tensor, max_value)
@@ -190,9 +191,6 @@ subtitle: Make an inference on your browser
                     var index = y * width + x
                     var depth = buffer[index]
                     var rgb = magma_values[depth]
-                    if (rgb === undefined){
-                    alert(depth)
-                    }
                     colorMap[i] = rgb[0]
                     colorMap[i + 1] = rgb[1]
                     colorMap[i + 2] = rgb[2]
