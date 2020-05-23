@@ -64,22 +64,20 @@ subtitle: Make an inference on your browser
         * @return {TypedArray.int32} prediction of the network
         */
         async predict(img) {
-            var raw_input = tf.browser.fromPixels(img)
-            var upsampledraw_input = tf.image.resizeBilinear(raw_input, [this.height, this.width])
-            raw_input.dispose()
-            var preprocessedInput = upsampledraw_input.expandDims()
-            preprocessedInput = tf.div(preprocessedInput, 255.0)
-            var result = this.model.predict(preprocessedInput);
+            const [data, resizeInputData] = tf.tidy(() => {
+                var raw_input = tf.browser.fromPixels(img)
+                var upsampledraw_input = tf.image.resizeBilinear(raw_input, [this.height, this.width])
+                var preprocessedInput = upsampledraw_input.expandDims()
+                preprocessedInput = tf.div(preprocessedInput, 255.0)
+                var result = this.model.predict(preprocessedInput);
+                result = this.prepareOutput(result, img.width, img.height);
+                upsampledraw_input = tf.cast(upsampledraw_input, 'int32')
+                const data = result.dataSync();
+                const resizeInputData = upsampledraw_input.dataSync();
+                return [data, resizeInputData]
+            }
             await tf.nextFrame();
-            preprocessedInput.dispose()
-            result = this.prepareOutput(result, img.width, img.height);
-            upsampledraw_input = tf.cast(upsampledraw_input, 'int32')
-            const data = result.dataSync();
-            result.dispose()
-            const resizeInputData = upsampledraw_input.dataSync();
-            upsampledraw_input.dispose()
-            return [data, resizeInputData]
-            
+            return [data, resizeInputData] 
         }
 
         /**
