@@ -34,3 +34,12 @@ then the server may serve more clients!
 You might argue that the server is necessary to provide the web page, and you have right. But
 in the native mobile application we run server-less! This is also great, because we have gained in terms of dependencies: we can run the app even where, for instance, a good internet connection is not
 available.
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <img src="{{site.baseurl}}/assets/img/client-server.png" alt="client-server">
+    </div>
+    <div class="col-md-6 col-sm-12">
+    <img src="{{site.baseurl}}/assets/img/client.png" alt="client"> 
+  </div>
