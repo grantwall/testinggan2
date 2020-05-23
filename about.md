@@ -38,18 +38,16 @@ You might argue that the server is necessary to provide the web page, and you ha
 <div class="container">
   <div class="row">
     <div class="col-md-6 col-sm-12">
-      <img src="{{site.baseurl}}/assets/img/client-server.png" alt="client-server">
+      <figure class="figure">
+        <img src="{{site.baseurl}}/assets/img/client-server.png" alt="client-server">
+        <figcaption class="figure-caption">Client-Side approach</figcaption>
+       </figure>
     </div>
     <div class="col-md-6 col-sm-12">
-      <img src="{{site.baseurl}}/assets/img/client.png" alt="client"> 
+      <figure class="figure">
+        <img src="{{site.baseurl}}/assets/img/client.png" alt="client"> 
+        <figcaption class="figure-caption">Server-less approach</figcaption>
+      </figure>
     </div>
-  </div>
-  <div class="row">
-      <div class="col-md-6 col-sm-12" align="center">
-        <p>Client-Side approach</p>
-      </div>
-      <div class="col-md-6 col-sm-12" align="center">
-        <p>Independent Client</p>
-      </div>
   </div>
 </div>
