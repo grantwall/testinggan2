@@ -23,7 +23,7 @@ subtitle: Make an inference on your browser
                 <figcaption class="figure-caption">First inference is slower (model is not cached yet)</figcaption>
             </figure>
         </div>
-        <div class="col-xs-3">
+        <div class="col-sm-3">
             <figure class="figure">
                 <span class="iconify" data-icon="flat-color-icons:flash-on" data-inline="false"></span>
                 <figcaption class="figure-caption">Interface is blocked during inference</figcaption>
