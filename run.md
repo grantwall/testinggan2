@@ -5,25 +5,25 @@ subtitle: Make an inference on your browser
 ---
 <div class="container" style="margin-top:20px">
     <div class="row"> 
-        <div class="col-sm-3">	
+        <div class="col-xs-3">	
               <figure class="figure">
                 <span class="iconify" data-icon="logos-tensorflow" data-inline="false"></span>
                 <figcaption class="figure-caption">Thanks to TensorFlowJS, the network runs on your device</figcaption>	
               </figure>	
             </div>
-        <div class="col-sm-3">
+        <div class="col-xs-3">
             <figure>
                 <span class="iconify" data-icon="mdi:phone-rotate-landscape" data-inline="false"></span>
                 <figcaption class="figure-caption">Use landscape pictures</figcaption>
             </figure>
         </div>
-        <div class="col-sm-3">
+        <div class="col-xs-3">
             <figure class="figure">
                 <span class="iconify" data-icon="flat-color-icons:alarm-clock" data-inline="false"></span>
                 <figcaption class="figure-caption">First inference is slower (model is not cached yet)</figcaption>
             </figure>
         </div>
-        <div class="col-sm-3">
+        <div class="col-xs-3">
             <figure class="figure">
                 <span class="iconify" data-icon="flat-color-icons:flash-on" data-inline="false"></span>
                 <figcaption class="figure-caption">Interface is blocked during inference</figcaption>
