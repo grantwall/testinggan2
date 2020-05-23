@@ -4,19 +4,40 @@ title: Run
 subtitle: Make an inference on your browser
 ---
 
-<div style="text-align: center;">
-    <div style="margin-top:1%">
-        <br>
-        With <a href="https://www.tensorflow.org/js">TensorFlow JS</a> the network runs on your device: the image is not sent and processed by the server!
-        <br>
-        Please notice that:
-        <br>
-        * The network has been trained in landscape mode
-        <br>
-        * First inference may be slower than subsequent
-        <br>
-        * Interface is blocked during inference
-    </div>
+    <div class="container" style="margin-top:1%">
+        <div class="row">
+            <div class="col-sm-3">
+              <figure>
+                <alt href="https://www.tensorflow.org/js">
+                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tensorflow.org%2Fjs&psig=AOvVaw2qGeF7dMX_Q4owRk5CjvCB&ust=1590331188955000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCID8_L6byukCFQAAAAAdAAAAABAO">
+                <figcaption class="figure-caption">Thanks to TensorFlowJS, the network runs on your device</figcaption>
+              </figure>
+            </div>
+            
+            <div class="col-sm-3">
+                <figure>
+                    <i class="fas fa-image"></i>
+                    <figcaption class="figure-caption">Use landscape pictures</figcaption>
+                </figure>
+            </div>
+            
+            <div class="col-sm-3">
+                <figure>
+                   <i class="fas fa-clock"></i>
+                    <figcaption class="figure-caption">First inference is slower (model is not cached yet)</figcaption>
+                </figure>
+            </div>
+            
+            <div class="col-sm-3">
+                <figure>
+                    <i class="fas fa-spinner"></i>
+                    <figcaption class="figure-caption">Interface is blocked during inference</figcaption>
+                </figure>
+            </div>
+            
+        </div>
+    </div>    
+       
     <input style="margin-top:5%" type="file" id="load" onchange="runInference($(this))" accept="image/png, image/jpeg">
     <div style="overflow-y: auto; margin-top:5%; height:100%">
         <img id="inputImg" src="">
