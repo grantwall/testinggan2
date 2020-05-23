@@ -63,13 +63,14 @@ subtitle: Make an inference on your browser
         * @param {Image} input image
         * @return {TypedArray.int32} prediction of the network
         */
-        predict(img) {
+        async predict(img) {
             return tf.tidy(() => {
                 var raw_input = tf.browser.fromPixels(img)
                 var upsampledraw_input = tf.image.resizeBilinear(raw_input, [this.height, this.width])
                 var preprocessedInput = upsampledraw_input.expandDims()
                 preprocessedInput = tf.div(preprocessedInput, 255.0)
                 var result = this.model.predict(preprocessedInput);
+                await tf.nextFrame();
                 result = this.prepareOutput(result, img.width, img.height);
                 upsampledraw_input = tf.cast(upsampledraw_input, 'int32')
                 const data = result.dataSync();
