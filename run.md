@@ -8,7 +8,7 @@ subtitle: Make an inference on your browser
         <div class="row">
         
             <div class="col-sm-3">
-              <figure>
+              <figure class="figure">
                 <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tensorflow.org%2Fjs&psig=AOvVaw2qGeF7dMX_Q4owRk5CjvCB&ust=1590331188955000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCID8_L6byukCFQAAAAAdAAAAABAO">
                 <figcaption class="figure-caption">Thanks to TensorFlowJS, the network runs on your device</figcaption>
               </figure>
@@ -22,14 +22,14 @@ subtitle: Make an inference on your browser
             </div>
             
             <div class="col-sm-3">
-                <figure>
+                <figure class="figure">
                    <i class="fas fa-clock"></i>
                     <figcaption class="figure-caption">First inference is slower (model is not cached yet)</figcaption>
                 </figure>
             </div>
             
             <div class="col-sm-3">
-                <figure>
+                <figure class="figure">
                     <i class="fas fa-spinner"></i>
                     <figcaption class="figure-caption">Interface is blocked during inference</figcaption>
                 </figure>
