@@ -2,7 +2,6 @@
 layout: page
 title: Run
 subtitle: Make an inference on your browser
-extra-js: //code.iconify.design/1/1.0.6/iconify.min.js
 ---
 <div class="container" style="margin-top:20px">
     <div class="row"> 
