@@ -136,6 +136,14 @@ subtitle: Make an inference on your browser
 
     async function display_result(img) {
         var results = await run_inference(img)
+        if (results[0] === 'undefined'){
+        swal({
+            title: "Error",
+            text: "Something went wrong, try again",
+            icon: "error",
+            button: "close",
+        });
+        }
         displayTensor(results[0], $("#outputImg"), model.width, model.height)
         display_input(results[1], $("#inputImg"), model.width, model.height)
     }
