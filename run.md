@@ -198,6 +198,9 @@ subtitle: Make an inference on your browser
                     var index = y * width + x
                     var depth = buffer[index]
                     var rgb = magma_values[depth]
+                    if (rgb === 'undefined'){
+                    alert(depth)
+                    }
                     colorMap[i] = rgb[0]
                     colorMap[i + 1] = rgb[1]
                     colorMap[i + 2] = rgb[2]
