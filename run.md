@@ -7,9 +7,7 @@ subtitle: Make an inference on your browser
     <div class="row"> 
         <div class="col-sm-3">	
               <figure class="figure">
-                <a href="https://www.tensorflow.org/js">
-                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tensorflow.org%2Fjs&psig=AOvVaw2qGeF7dMX_Q4owRk5CjvCB&ust=1590331188955000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCID8_L6byukCFQAAAAAdAAAAABAO">	
-                </a>
+                <span class="iconify" data-icon="logos-tensorflow" data-inline="false"></span>
                 <figcaption class="figure-caption">Thanks to TensorFlowJS, the network runs on your device</figcaption>	
               </figure>	
             </div>
@@ -35,13 +33,19 @@ subtitle: Make an inference on your browser
         </div>
 
     </div>
-</div>    
 
-<input style="margin-top:5%" type="file" id="load" onchange="runInference($(this))" accept="image/png, image/jpeg">
-<div style="overflow-y: auto; margin-top:5%; height:100%">
-    <img id="inputImg" src="">
-    <img id="outputImg" src="">
-</div>
+    <div class="row" style="margin-top:5%">
+        <input class="text-center" type="file" id="load" onchange="runInference($(this))" accept="image/png, image/jpeg">
+    </div>
+    <div class="row">
+        div class="col-md-6">
+            <img id="inputImg" src="">
+        </div>
+        <div class="col-md-6">
+            <img id="outputImg" src="">
+        </div>
+    </div>
+</div>    
 
 <script>
 
