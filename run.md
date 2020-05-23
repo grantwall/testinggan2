@@ -14,19 +14,19 @@ extra-js: //code.iconify.design/1/1.0.6/iconify.min.js
             </div>
         <div class="col-sm-3">
             <figure>
-                <i class="fas fa-image"></i>
+                <span class="iconify" data-icon="mdi:phone-rotate-landscape" data-inline="false"></span>
                 <figcaption class="figure-caption">Use landscape pictures</figcaption>
             </figure>
         </div>
         <div class="col-sm-3">
             <figure class="figure">
-               <i class="fas fa-clock"></i>
+                <span class="iconify" data-icon="flat-color-icons:alarm-clock" data-inline="false"></span>
                 <figcaption class="figure-caption">First inference is slower (model is not cached yet)</figcaption>
             </figure>
         </div>
         <div class="col-sm-3">
             <figure class="figure">
-                <i class="fas fa-spinner"></i>
+                <span class="iconify" data-icon="flat-color-icons:flash-on" data-inline="false"></span>
                 <figcaption class="figure-caption">Interface is blocked during inference</figcaption>
             </figure>
         </div>
