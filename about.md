@@ -41,14 +41,15 @@ available.
       <img src="{{site.baseurl}}/assets/img/client-server.png" alt="client-server">
     </div>
     <div class="col-md-6 col-sm-12">
-    <img src="{{site.baseurl}}/assets/img/client.png" alt="client"> 
+      <img src="{{site.baseurl}}/assets/img/client.png" alt="client"> 
+    </div>
   </div>
   <div class="row">
       <div class="col-md-6 col-sm-12">
-        Client-Side approach
+        <p>Client-Side approach</p>
       </div>
       <div class="col-md-6 col-sm-12">
-        Independent Client
+        <p>Independent Client</p>
       </div>
   </div>
 </div>
