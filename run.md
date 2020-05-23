@@ -3,38 +3,37 @@ layout: page
 title: Run
 subtitle: Make an inference on your browser
 ---
-
-    <div class="container" style="margin-top:1%">
-        <div class="row"> 
-            <div class="col-sm-3">
-                <figure>
-                    <i class="fas fa-image"></i>
-                    <figcaption class="figure-caption">Use landscape pictures</figcaption>
-                </figure>
-            </div>
-            
-            <div class="col-sm-3">
-                <figure class="figure">
-                   <i class="fas fa-clock"></i>
-                    <figcaption class="figure-caption">First inference is slower (model is not cached yet)</figcaption>
-                </figure>
-            </div>
-            
-            <div class="col-sm-3">
-                <figure class="figure">
-                    <i class="fas fa-spinner"></i>
-                    <figcaption class="figure-caption">Interface is blocked during inference</figcaption>
-                </figure>
-            </div>
-            
+<div class="container" style="margin-top:1%">
+    <div class="row"> 
+        <div class="col-sm-3">
+            <figure>
+                <i class="fas fa-image"></i>
+                <figcaption class="figure-caption">Use landscape pictures</figcaption>
+            </figure>
         </div>
-    </div>    
-       
-    <input style="margin-top:5%" type="file" id="load" onchange="runInference($(this))" accept="image/png, image/jpeg">
-    <div style="overflow-y: auto; margin-top:5%; height:100%">
-        <img id="inputImg" src="">
-        <img id="outputImg" src="">
+
+        <div class="col-sm-3">
+            <figure class="figure">
+               <i class="fas fa-clock"></i>
+                <figcaption class="figure-caption">First inference is slower (model is not cached yet)</figcaption>
+            </figure>
+        </div>
+
+        <div class="col-sm-3">
+            <figure class="figure">
+                <i class="fas fa-spinner"></i>
+                <figcaption class="figure-caption">Interface is blocked during inference</figcaption>
+            </figure>
+        </div>
+
     </div>
+</div>    
+
+<input style="margin-top:5%" type="file" id="load" onchange="runInference($(this))" accept="image/png, image/jpeg">
+<div style="overflow-y: auto; margin-top:5%; height:100%">
+    <img id="inputImg" src="">
+    <img id="outputImg" src="">
+</div>
 
 <script>
 
