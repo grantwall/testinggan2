@@ -29,6 +29,12 @@ subtitle: Make an inference on your browser
                 <figcaption class="figure-caption">Interface is blocked during inference</figcaption>
             </figure>
         </div>
+        <div class="col-xs-6 col-sm-3">
+            <figure class="figure">
+                <span class="iconify" data-icon="simple-icons:webgl" data-inline="false"></span>
+                <figcaption class="figure-caption">if possible, enable WebGL</figcaption>
+            </figure>
+        </div>
     </div>
     <div class="row text-center" style="margin-top:20px">
         <input type="file" id="load" onchange="runInference($(this))" accept="image/png, image/jpeg">
