@@ -40,13 +40,13 @@ You might argue that the server is necessary to provide the web page, and you ha
     <div class="col-md-6 col-sm-12">
       <figure class="figure">
         <img src="{{site.baseurl}}/assets/img/client-server.png" alt="client-server">
-        <figcaption class="figure-caption">Client-Side approach</figcaption>
+        <figcaption class="figure-caption text-center">Client-Side approach</figcaption>
        </figure>
     </div>
     <div class="col-md-6 col-sm-12">
       <figure class="figure">
         <img src="{{site.baseurl}}/assets/img/client.png" alt="client"> 
-        <figcaption class="figure-caption">Server-less approach</figcaption>
+        <figcaption class="figure-caption text-center">Server-less approach</figcaption>
       </figure>
     </div>
   </div>
