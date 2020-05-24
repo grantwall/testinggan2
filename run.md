@@ -8,7 +8,7 @@ subtitle: Make an inference on your browser
         <div class="col-xs-6 col-sm-3 text-center">	
               <figure class="figure">
                 <span class="iconify" data-icon="logos-tensorflow" data-inline="false"></span>
-                <figcaption class="figure-caption">Thanks to TensorFlowJS, the network runs on your device: <b>the image is not sent to the server<b></figcaption>	
+                <figcaption class="figure-caption">Thanks to TensorFlowJS, the network runs on your device: <b>the image is not sent to the server</b></figcaption>	
               </figure>	
             </div>
         <div class="col-xs-6 col-sm-2 text-center">
