@@ -5,7 +5,7 @@ subtitle: Make an inference on your browser
 ---
 <div class="container" style="margin-top:20px">
     <div class="row"> 
-        <div class="col-xs-6 col-sm-2">	
+        <div class="col-xs-6 col-sm-3">	
               <figure class="figure">
                 <span class="iconify" data-icon="logos-tensorflow" data-inline="false"></span>
                 <figcaption class="figure-caption">Thanks to TensorFlowJS, the network runs on your device</figcaption>	
@@ -29,7 +29,7 @@ subtitle: Make an inference on your browser
                 <figcaption class="figure-caption">Interface is blocked during inference</figcaption>
             </figure>
         </div>
-        <div class="col-xs-6 col-sm-2">
+        <div class="col-xs-6 col-sm-3">
             <figure class="figure">
                 <span class="iconify" data-icon="simple-icons:webgl" data-inline="false"></span>
                 <figcaption class="figure-caption">if possible, enable WebGL</figcaption>
