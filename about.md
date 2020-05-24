@@ -26,14 +26,15 @@ We both developed a mobile application (for Android and iOS devices), but they h
 browser. Indeed, using [TensorFlow JS](https://www.tensorflow.org/js) the network runs inside the client device, and not in the remote server.
 
 # Why client-side inference is great?
-First, the client does not need to share user images with the server, since they are processed locally in the client device, thus enhancing the privacy of the user.
-Moreover, the server can scale better, since it has less tasks to solve.
+First, the client does not need to share user data with the server because images are processed directly by the client device. In this way the privacy of the user is enhanced.
 
-For instance, suppose you have to serve 1k people: in a client-server application all the clients send a request to the server, which has to take the images, process them and send back to the client
-the outcomes. If the users now become 10k, or even more, you may have to replicate the server. Instead, if each client is able to process the images on its own
-then the server may serve more clients!
+Moreover, the server can scale better, since it has less requests to solve. In a client-server web demo the server has two types of request: page request (that is, please send me the html and scripts to render the page on the browser), and inference request (please process this image and send me back the depth).
+We can expect that the second type of request requires most of the effort.
+Now suppose the server has 1k requests: this means that all the clients send a inference request to the server, and for each request the server has to take the image, process it and send back the outcome to the client. 
+If the users grow (for instance 10k, or even more) you may have to replicate the server because it is not able to serve all the requests in a limited amount of time. Instead, if each client is able to process the images on its own
+then the server may serve more clients since it has to provide just the code for the web page!
 
-You might argue that the server is necessary to provide the web page, and you have right. If you need to run server-less, you can use our native mobile application! This is also great, because we have gained in terms of dependencies: we can run the app even where, for instance, a good internet connection is not available.
+You might argue that the server is necessary to provide the web page, and you have right. If you need to run totally server-less, you can use our native mobile application! This is also great, because we have gained in terms of dependencies: we can run the app even where, for instance, a good internet connection is not available.
 
 <div class="container">
   <div class="row">
