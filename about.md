@@ -30,7 +30,7 @@ First, the client does not need to share user data with the server because image
 
 Moreover, the server can scale better, since it has less requests to solve. In a client-server web demo the server has two types of request: page request (that is, please send me the html and scripts to render the page on the browser), and inference request (please process this image and send me back the depth).
 We can expect that the second type of request requires most of the effort.
-Now suppose the server has 1k requests: this means that all the clients send a inference request to the server, and for each request the server has to take the image, process it and send back the outcome to the client. 
+Now suppose the server has 1k requests: this means that all the clients send a page and one or many inference requests to the server, and for each inference request the server has to take the image, process it and send back the outcome to the client. 
 If the users grow (for instance 10k, or even more) you may have to replicate the server because it is not able to serve all the requests in a limited amount of time. Instead, if each client is able to process the images on its own
 then the server may serve more clients since it has to provide just the code for the web page!
 
