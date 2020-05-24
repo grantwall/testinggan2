@@ -7,31 +7,31 @@ subtitle: Make an inference on your browser
     <div class="row"> 
         <div class="col-xs-6 col-sm-3 text-center">	
               <figure class="figure">
-                <span class="iconify" data-icon="logos-tensorflow" data-inline="false" style="font-size: 32px"></span>
+                <span class="iconify" data-icon="logos-tensorflow" data-inline="false" style="font-size:50px"></span>
                 <figcaption class="figure-caption">Thanks to TensorFlowJS, the network runs on your device: <b>the image is not sent to the server</b></figcaption>	
               </figure>	
             </div>
         <div class="col-xs-6 col-sm-2 text-center">
             <figure>
-                <span class="iconify" data-icon="mdi:phone-rotate-landscape" data-inline="false" style="font-size: 32px"></span>
+                <span class="iconify" data-icon="mdi:phone-rotate-landscape" data-inline="false" style="font-size: 50px"></span>
                 <figcaption class="figure-caption">Use landscape pictures</figcaption>
             </figure>
         </div>
         <div class="col-xs-6 col-sm-2 text-center">
             <figure class="figure">
-                <span class="iconify" data-icon="flat-color-icons:alarm-clock" data-inline="false" style="font-size: 32px"></span>
+                <span class="iconify" data-icon="flat-color-icons:alarm-clock" data-inline="false" style="font-size: 50px"></span>
                 <figcaption class="figure-caption">First inference is slower (model is not cached yet)</figcaption>
             </figure>
         </div>
         <div class="col-xs-6 col-sm-2 text-center">
             <figure class="figure">
-                <span class="iconify" data-icon="flat-color-icons:flash-on" data-inline="false" style="font-size: 32px"></span>
+                <span class="iconify" data-icon="flat-color-icons:flash-on" data-inline="false" style="font-size: 50px"></span>
                 <figcaption class="figure-caption">Interface is blocked during inference</figcaption>
             </figure>
         </div>
         <div class="col-xs-6 col-sm-3 text-center">
             <figure class="figure">
-                <span class="iconify" data-icon="simple-icons:webgl" data-inline="false" style="font-size: 32px"></span>
+                <span class="iconify" data-icon="simple-icons:webgl" data-inline="false" style="font-size: 50px"></span>
                 <figcaption class="figure-caption">if possible, enable WebGL</figcaption>
             </figure>
         </div>
