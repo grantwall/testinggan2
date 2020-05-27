@@ -52,3 +52,6 @@ You might argue that the server is necessary to provide the web page, and you ha
     </div>
   </div>
 </div>
+
+# License
+The weights of this network, outside of this project, can be used only for academic research. This project has demonstration purposes only.
