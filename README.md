@@ -7,6 +7,11 @@ from the University of Bologna.
 
 # More information about this work will be provided in the next days!
 
+# License
+The code for the website is from [beautiful-jekyll](https://github.com/daattali/beautiful-jekyll), and it is licensed under MIT License.
+
+Weights of the network can be used for academic purposes only.
+
 # Contact
 For questions write to
 filippo.aleotti2@unibo.it
