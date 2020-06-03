@@ -36,7 +36,7 @@ browser. Indeed, using [TensorFlow JS](https://www.tensorflow.org/js) the networ
         <div class="row">
             <div class="col-xs-12">
                 <div  class="text-center">
-                       <a href="https://github.com/mattpoggi/pydnet" class="btn btn-warning"> Original Code</a>
+                       <a href="https://github.com/mattpoggi/pydnet" class="btn btn-dark"> Original Code</a>
 <a  href="https://github.com/FilippoAleotti/mobilePydnet" class="btn btn-success">Mobile App</a>
                  <a href="https://arxiv.org/pdf/1806.11430.pdf" class="btn btn-info">Paper</a>
                 </div>
