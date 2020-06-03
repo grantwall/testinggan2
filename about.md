@@ -10,6 +10,14 @@ A monocular depth network is (generally) a CNN able to infer
 the depth of the scene from a single image. We use a CNN because of the
 complexity of this task.
 
+For this demo, we used PyDNet as network. More information about PyDNet can be found in the [official paper](https://arxiv.org/pdf/1806.11430.pdf)
+<div class="text-center">
+ <figure class="figure">
+   <img src="{{site.baseurl}}/assets/img/pydnet.jpg" alt="PyDNet">
+   <figcaption class="figure-caption text-center">PyDNet architecture</figcaption>
+ </figure>
+</div>
+       
 # Why depth is important?
 We can use depth information in many applications, such as Augmented Reality (AR),
 3D Reconstruction, Collision Avoidance and many others.
