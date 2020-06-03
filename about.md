@@ -32,16 +32,13 @@ browser. Indeed, using [TensorFlow JS](https://www.tensorflow.org/js) the networ
  </figure>
 </div>
 
-<div class="mx-auto" style="margin-bottom:-100px; margin-top:7%">
+<div class="mx-auto" style="margin-top:20px">
     <ul class="list-inline">
         <li>
             <a  href="https://github.com/FilippoAleotti/mobilePydnet" class="btn btn-success">Mobile App</a>
         </li>
         <li>
             <a href="https://arxiv.org/pdf/1806.11430.pdf" class="btn btn-light">Paper</a>
-        </li>
-        <li>
-            <a  style="color:#{{site.color.primary}};" data-dismiss="modal" class="btn-social btn-outline"><i class="fa fa-times fa-2x"></i></a>
         </li>
     </ul>
 </div>
