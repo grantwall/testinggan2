@@ -32,16 +32,17 @@ browser. Indeed, using [TensorFlow JS](https://www.tensorflow.org/js) the networ
  </figure>
 </div>
 
-<div class="mx-auto" style="margin-top:20px">
-    <ul class="list-inline">
-        <li>
-            <a  href="https://github.com/FilippoAleotti/mobilePydnet" class="btn btn-success">Mobile App</a>
-        </li>
-        <li>
-            <a href="https://arxiv.org/pdf/1806.11430.pdf" class="btn btn-light">Paper</a>
-        </li>
-    </ul>
-</div>
+ <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div  class="text-center">
+<a  href="https://github.com/FilippoAleotti/mobilePydnet" class="btn btn-success">Mobile App</a>
+                 <a href="https://arxiv.org/pdf/1806.11430.pdf" class="btn btn-light">Paper</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 If you use this code or PyDNet in your projects, please cite our paper:
 ```
