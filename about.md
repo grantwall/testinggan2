@@ -20,7 +20,7 @@ is attractive since it requires just a single camera. For many of these, (near) 
 # What do I need to run a monocular depth network?
 In general, you may need high performance devices, like a GPU, because many state-of-the-art networks
 leverage millions of parameters (eg 50 M, or even 100M). This means that they are not able to run with high FPS
-on mobile or embedded devices. On the contrary, in this project we deploy a lightweight network, called [PyDNet](https://arxiv.org/pdf/1806.11430.pdf)
+on mobile or embedded devices. On the contrary, in this project we deploy a lightweight network, called **PyDNet**
 that is able to run directly on mobile devices.
 We both developed a mobile application (for Android and iOS devices), but it has to be installed. Instead, in this demo, you can run the network on your device just using your
 browser. Indeed, using [TensorFlow JS](https://www.tensorflow.org/js) the network runs inside the client device, and not in the remote server.
@@ -30,6 +30,20 @@ browser. Indeed, using [TensorFlow JS](https://www.tensorflow.org/js) the networ
    <img src="{{site.baseurl}}/assets/img/pydnet.jpg" alt="PyDNet">
    <figcaption class="figure-caption text-center">PyDNet architecture</figcaption>
  </figure>
+</div>
+
+<div class="mx-auto" style="margin-bottom:-100px; margin-top:7%">
+    <ul class="list-inline">
+        <li>
+            <a  href="https://github.com/FilippoAleotti/mobilePydnet" class="btn btn-success">Mobile App</a>
+        </li>
+        <li>
+            <a href="https://arxiv.org/pdf/1806.11430.pdf" class="btn btn-light">Paper</a>
+        </li>
+        <li>
+            <a  style="color:#{{site.color.primary}};" data-dismiss="modal" class="btn-social btn-outline"><i class="fa fa-times fa-2x"></i></a>
+        </li>
+    </ul>
 </div>
 
 # Why client-side inference is great?
@@ -62,3 +76,16 @@ You might argue that the server is necessary to provide the web page, and you ha
 
 # License
 The weights of this network, outside of this project, can be used only for academic research. This project has demonstration purposes only.
+
+If you use this code in your projects, please cite our paper:
+```
+@inproceedings{pydnet18,
+  title     = {Towards real-time unsupervised monocular depth estimation on CPU},
+  author    = {Poggi, Matteo and
+               Aleotti, Filippo and
+               Tosi, Fabio and
+               Mattoccia, Stefano},
+  booktitle = {IEEE/JRS Conference on Intelligent Robots and Systems (IROS)},
+  year = {2018}
+}
+```
