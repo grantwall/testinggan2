@@ -9,14 +9,6 @@ subtitle: Browser is what you need
 A monocular depth network is (generally) a CNN able to infer 
 the depth of the scene from a single image. We use a CNN because of the
 complexity of this task.
-
-For this demo, we used PyDNet as network. More information about PyDNet can be found in the [official paper](https://arxiv.org/pdf/1806.11430.pdf)
-<div class="text-center">
- <figure class="figure">
-   <img src="{{site.baseurl}}/assets/img/pydnet.jpg" alt="PyDNet">
-   <figcaption class="figure-caption text-center">PyDNet architecture</figcaption>
- </figure>
-</div>
        
 # Why depth is important?
 We can use depth information in many applications, such as Augmented Reality (AR),
@@ -30,8 +22,15 @@ In general, you may need high performance devices, like a GPU, because many stat
 leverage millions of parameters (eg 50 M, or even 100M). This means that they are not able to run with high FPS
 on mobile or embedded devices. On the contrary, in this project we deploy a lightweight network, called [PyDNet](https://arxiv.org/pdf/1806.11430.pdf)
 that is able to run directly on mobile devices.
-We both developed a mobile application (for Android and iOS devices), but they have to been installed. Instead, in this demo, you can run the network on your device just using your
+We both developed a mobile application (for Android and iOS devices), but it has to be installed. Instead, in this demo, you can run the network on your device just using your
 browser. Indeed, using [TensorFlow JS](https://www.tensorflow.org/js) the network runs inside the client device, and not in the remote server.
+
+<div class="text-center">
+ <figure class="figure">
+   <img src="{{site.baseurl}}/assets/img/pydnet.jpg" alt="PyDNet">
+   <figcaption class="figure-caption text-center">PyDNet architecture</figcaption>
+ </figure>
+</div>
 
 # Why client-side inference is great?
 First, the client does not need to share user data with the server because images are processed directly by the client device. In this way the privacy of the user is enhanced.
