@@ -37,7 +37,7 @@ browser. Indeed, using [TensorFlow JS](https://www.tensorflow.org/js) the networ
             <div class="col-xs-12">
                 <div  class="text-center">
 <a  href="https://github.com/FilippoAleotti/mobilePydnet" class="btn btn-success">Mobile App</a>
-                 <a href="https://arxiv.org/pdf/1806.11430.pdf" class="btn btn-light">Paper</a>
+                 <a href="https://arxiv.org/pdf/1806.11430.pdf" class="btn btn-info">Paper</a>
                 </div>
             </div>
         </div>
