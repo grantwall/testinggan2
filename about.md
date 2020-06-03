@@ -46,6 +46,19 @@ browser. Indeed, using [TensorFlow JS](https://www.tensorflow.org/js) the networ
     </ul>
 </div>
 
+If you use this code or PyDNet in your projects, please cite our paper:
+```
+@inproceedings{pydnet18,
+  title     = {Towards real-time unsupervised monocular depth estimation on CPU},
+  author    = {Poggi, Matteo and
+               Aleotti, Filippo and
+               Tosi, Fabio and
+               Mattoccia, Stefano},
+  booktitle = {IEEE/JRS Conference on Intelligent Robots and Systems (IROS)},
+  year = {2018}
+}
+```
+
 # Why client-side inference is great?
 First, the client does not need to share user data with the server because images are processed directly by the client device. In this way the privacy of the user is enhanced.
 
@@ -76,16 +89,3 @@ You might argue that the server is necessary to provide the web page, and you ha
 
 # License
 The weights of this network, outside of this project, can be used only for academic research. This project has demonstration purposes only.
-
-If you use this code in your projects, please cite our paper:
-```
-@inproceedings{pydnet18,
-  title     = {Towards real-time unsupervised monocular depth estimation on CPU},
-  author    = {Poggi, Matteo and
-               Aleotti, Filippo and
-               Tosi, Fabio and
-               Mattoccia, Stefano},
-  booktitle = {IEEE/JRS Conference on Intelligent Robots and Systems (IROS)},
-  year = {2018}
-}
-```
