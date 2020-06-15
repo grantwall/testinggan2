@@ -97,8 +97,9 @@ subtitle: Make an inference on your browser
             return tf.tidy(() => {
                 tensor = tf.relu(tensor)
                 tensor = tf.squeeze(tensor)
+                min_value = tf.min(tensor)
                 var max_value = tf.max(tensor)
-                tensor = tf.div(tensor, max_value)
+                tensor = (tensor - min_value) / (max_value - min_value)
                 tensor = tf.mul(tensor, 255.0)
                 tensor = tf.cast(tensor, 'int32')
                 return tensor
