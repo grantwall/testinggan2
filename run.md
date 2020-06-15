@@ -50,7 +50,6 @@ subtitle: Make an inference on your browser
 </div>    
 
 <script>
-
     class Pydnet {
         /**
         * Initializes Pydnet network.
@@ -97,7 +96,7 @@ subtitle: Make an inference on your browser
             return tf.tidy(() => {
                 tensor = tf.relu(tensor)
                 tensor = tf.squeeze(tensor)
-                min_value = tf.min(tensor)
+                var min_value = tf.min(tensor)
                 var max_value = tf.max(tensor)
                 tensor = tf.div(tf.sub(tensor,min_value), tf.sub(max_value,min_value))
                 tensor = tf.mul(tensor, 255.0)
