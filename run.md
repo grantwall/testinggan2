@@ -99,7 +99,7 @@ subtitle: Make an inference on your browser
                 tensor = tf.squeeze(tensor)
                 min_value = tf.min(tensor)
                 var max_value = tf.max(tensor)
-                tensor = (tensor - min_value) / (max_value - min_value)
+                tensor = tf.div(tf.sub(tensor,min_value), tf.sub(max_value,min_value))
                 tensor = tf.mul(tensor, 255.0)
                 tensor = tf.cast(tensor, 'int32')
                 return tensor
